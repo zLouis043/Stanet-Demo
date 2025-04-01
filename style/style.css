@@ -190,7 +190,7 @@ nav ul #home-btn{
     position: relative;
     width:100%;
     height:50em;
-    background-image:url("assets/hero-page-bg.avif");
+    background-image:url("../assets/hero-page-bg.avif");
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: scroll;

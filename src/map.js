@@ -1,6 +1,6 @@
 var map = L.map('map').setView([56.505, -0.09], 13);
 var fg = new L.featureGroup();
-const filePath = "csv/locations.csv";
+const filePath = "../csv/locations.csv";
 const delimiter = ",";
 
 var tile_layer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {

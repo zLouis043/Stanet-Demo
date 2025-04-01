@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="IT-it"> 
+    <head>
+        <title>
+            Stanet | Home
+        </title>
+        <link rel="icon" href="assets/LogoTransparent.png">
+        <link rel="stylesheet" href="style.css">
+        <script src="src.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="navbar-mobile">
+            <ul>
+                <li>
+                    <a id="header-logo-mobile" href="index.html">
+                        <img id="header-logo" src="assets/LogoTransparent.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <button id="open-sidebar-btn" onclick="openSidebar(true)" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"/></svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <nav id="navbar">
+            <ul>
+                <li>
+                    <button id="close-sidebar-btn" onclick="openSidebar(false)" aria-label="close sidebar">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z"/></svg>
+                    </button>
+                </li>
+                <li id="home-btn" class="active-link" aria-current="page">
+                    <a href="index.html">
+                        <img id="header-logo" src="assets/LogoTransparent.png" alt="">
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="index.html#services">
+                        Servizi
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a  href="locations.html">
+                        Sedi
+                    </a>
+                </li>
+
+                <li class="menu-item active-link">
+                    <a href="#contacts">
+                        Contatti
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a>
+                        Supporto
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="overlay" onclick="openSidebar(false)" aria-hidden="true"></div>
+
+        <section id="hero">
+            <div id="contents">
+                <h1 id="contents-title">
+                    Servizi di Consulenza
+                </h1>
+                <p id="contents-p">
+                    i nostri servizi
+                    di consulenza automobilistica innovativa per 
+                    agenzie pratiche automobili.<br> Scopri subito i nostri servizi
+                </p>
+                <button onclick="scrollToElement('services')" class="gen-btn"><b>Scopri</b></button>
+            </div>
+            <div id="hero-wave">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
+                    <path fill="#0099ff" fill-opacity="1" d="M0,192L80,197.3C160,203,320,213,480,202.7C640,192,800,160,960,160C1120,160,1280,192,1360,208L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+                </svg>
+            </div>
+        </section>
+        <section id="services">
+            <h1 id="services-title">
+                I nostri servizi
+            </h1>
+            <div id="services-grid">
+                <div class="service-card">
+                    <h3 class="service-title">
+                        Bollo Auto & Tributi
+                    </h3>
+                    <p class="service-description">
+                        Il nostro team di esperti ti supporterà con assistenza legale qualificata e professionale per tutte le tue necessità. Garantiamo servizi di alta qualità e competenza.
+                    </p>
+                    <div class="service-img-container">
+                        <img src="https://static.wixstatic.com/media/nsplsh_6677595a33425f5151636f~mv2_d_6000_4000_s_4_2.jpg/v1/fill/w_411,h_290,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image%20by%20Oli%20Woodman.jpg" alt="" class="service-img">
+                    </div>
+                    <button class="service-btn">
+                        Scopri
+                    </button>               
+                </div>
+
+                <div class="service-card">
+                    <h3 class="service-title">
+                        Visure PRA
+                    </h3>
+                    <p class="service-description">
+                        Gestiamo le pratiche burocratiche per te, risparmiandoti tempo e stress. Affidati alla nostra competenza e esperienza per una gestione efficiente e accurata.
+                    </p>
+                    <div class="service-img-container">
+                        <img src="https://static.wixstatic.com/media/0114db003c2f4b84a5e41a0ff707e34a.jpg/v1/fill/w_411,h_290,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/parcheggio.jpg" alt="" class="service-img">
+                    </div>
+                    <button class="service-btn">
+                        Scopri
+                    </button>                 
+                </div>
+
+                <div class="service-card">
+                    <h3 class="service-title">
+                        Visure Catastali
+                    </h3>
+                    <p class="service-description">
+                        Offriamo consulenza fiscale dedicata per agevolare il tuo carico fiscale e assicurarti di rispettare le normative vigenti. Massimizza i tuoi vantaggi fiscali con noi.
+                    </p>
+                    <div class="service-img-container">
+                     <img src="https://static.wixstatic.com/media/11062b_f59922a175e34472bd1bd7a6d547e9ca~mv2.jpeg/v1/fill/w_411,h_290,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Casa%20con%20tetto%20rosso.jpeg" alt="" class="service-img">
+                    </div>
+                    <button class="service-btn">
+                        Scopri
+                    </button>                  
+                </div>
+
+                <div class="service-card">
+                    <h3 class="service-title">
+                        Software Pratiche Auto
+                    </h3>
+                    <p class="service-description">
+                        Offriamo consulenza fiscale dedicata per agevolare il tuo carico fiscale e assicurarti di rispettare le normative vigenti. Massimizza i tuoi vantaggi fiscali con noi.
+                    </p>
+                    <div class="service-img-container">
+                        <img src="https://static.wixstatic.com/media/ce3336a21d2d4c29997a2d998b256cd4.jpg/v1/fill/w_411,h_290,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Tutorial%20Computer.jpg" alt="" class="service-img">
+                    </div>
+                    <button class="service-btn">
+                        Scopri
+                    </button>                
+                </div>
+
+                <div class="service-card">
+                    <h3 class="service-title">
+                        Legal Mail
+                    </h3>
+                    <p class="service-description">
+                        Offriamo consulenza fiscale dedicata per agevolare il tuo carico fiscale e assicurarti di rispettare le normative vigenti. Massimizza i tuoi vantaggi fiscali con noi.
+                    </p>
+                    <div class="service-img-container">
+                        <img src="https://static.wixstatic.com/media/11062b_0855c3390ec64726a661227ed664a145~mv2.jpeg/v1/fill/w_411,h_290,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Giudice.jpeg" alt="" class="service-img">
+                    </div>
+                    <button class="service-btn">
+                        Scopri
+                    </button>               
+                </div>
+
+                <div class="service-card">
+                    <h3 class="service-title">
+                        Cloud Computing
+                    </h3>
+                    <p class="service-description">
+                        Offriamo consulenza fiscale dedicata per agevolare il tuo carico fiscale e assicurarti di rispettare le normative vigenti. Massimizza i tuoi vantaggi fiscali con noi.
+                    </p>
+                    <div class="service-img-container">
+                        <img src="https://static.wixstatic.com/media/nsplsh_4d35747a5a7446434f6673~mv2.jpg/v1/fill/w_411,h_290,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image%20by%20Taylor%20Vick.jpg" alt="" class="service-img">    
+                    </div>
+                    <button class="service-btn">
+                        Scopri
+                    </button>              
+                </div>
+            </div>
+        </section>
+        <div id="cookies">
+            <div class="container">
+                <div class="subcontainer">
+                    <div class="cookies">
+                        <p>
+                            Questo sito utilizza cookies per migliorare la tua esperienza di navigazione.
+                            <a href="">
+                                Scopri di più.
+                            </a>
+                        </p>
+                        <div>
+                            <button id="cookies-dec-btn" class="cookie-btn decline">
+                                Rifiuta
+                            </button>
+                            <button id="cookies-acpt-btn" class="cookie-btn accept">
+                                Accetta
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div id="footer-wave">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,64L80,58.7C160,53,320,43,480,42.7C640,43,800,53,960,64C1120,75,1280,85,1360,90.7L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+            </div>
+            <div id="container">
+                <div id="contacts">
+                    <h1 id="contact-title">
+                        Contattaci
+                    </h1>
+                    <p id="contacts-description">
+                        Contattateci per maggiori informazioni sui nostri servizi.<br>I nostri esperti possono aiutarvi a trovare esattamente ciò che cercate e fornirvi consigli<br> o informazioni sulle opzioni di offerta. 
+                    </p>
+                    <p class="contacts-ref">
+                        <b>Telefono 1</b>: 06 23267722<br>
+                    </p>
+                    <p class="contacts-ref">
+                        <b>Telefono 2</b>: 06 56558956<br>
+                    </p>
+                    <p class="contacts-ref">
+                        <b>Email</b>: <u>info@stanet.eu</u>
+                    </p>
+                    <p id="contacts-main-location">
+                        <b>Sede Legale</b>:<br>
+                        Viale Gianluigi Bonelli, 40, Roma, Italy
+                    </p>
+                </div>
+            </div>
+            <p id="footer-copyright">
+                &#169; 2019. Stanet S.p.A. All Rights Reserved  <u>@stanet.eu</u>  +39 06 2326 7722 - Partita IVA 03234870610 
+            </p>
+        </div>
+    </body>
+</html>

@@ -112,6 +112,7 @@ nav ul #home-btn{
 
     #navbar-mobile {
         display: block;
+        box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.05);
     }
 
     #navbar-mobile > ul {
@@ -408,11 +409,11 @@ nav ul #home-btn{
 
 #footer-wave {
     position: absolute;
-    bottom: 80%;
+    bottom: 90%;
     width:100%;
     height: auto;
     transform-origin: bottom;
-    transform: scaleY(0.4);
+    transform: scaleY(0.3);
 
 }
 

@@ -15,7 +15,7 @@ parseCSV(filePath, delimiter)
         data.forEach((row) => {
         if(row['Y'] && row['X']){
             latlng = new L.latLng(Number(row['Y']), Number(row['X']));
-            var marker = new L.Marker(latlng).addTo(fg);
+            var marker = new L.Marker(latlng, {tags: [row['Regione']]}).addTo(fg);
             marker.bindPopup(`<b>${row['Name']}</b><br>${row['formatted']}`);
         }
         });

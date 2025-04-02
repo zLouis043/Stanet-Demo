@@ -41,7 +41,7 @@ html {
         position: sticky;
         top: 0;
         z-index: 1;
-        transition: all 0.3s ease; 
+        transition: all 0.6s ease; 
     }
     
     #navbar.hidden {
@@ -136,7 +136,7 @@ nav ul #home-btn{
         background-color: var(--primary-color);
         z-index: 1;
         box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.05);
-        transition: all 0.3s ease; 
+        transition: all 0.6s ease; 
     }
 
     #navbar-mobile.hidden {

@@ -1,4 +1,4 @@
-var map = L.map('map').setView([56.505, -0.09], 13);
+var map = L.map('map');
 var fg = new L.featureGroup();
 const filePath = "csv/locations.csv";
 const delimiter = ",";
@@ -16,10 +16,10 @@ parseCSV(filePath, delimiter)
         if(row['Y'] && row['X']){
             latlng = new L.latLng(Number(row['Y']), Number(row['X']));
             var marker = new L.Marker(latlng).addTo(fg);
+            marker.bindPopup(`<b>${row['Name']}</b><br>${row['formatted']}`);
         }
         });
-
-        map.setView(latlng,9);
+        map.setView(latlng, 9);
     })
     .catch((error) => {
         console.error("Errore durante il parsing del CSV:", error);

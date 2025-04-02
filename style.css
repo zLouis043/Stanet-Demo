@@ -11,6 +11,11 @@
     --shadow-color: rgba(203, 203, 203, 0.634);
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: var(--primary-color);
     font-family:Arial, Helvetica, sans-serif;
@@ -27,9 +32,22 @@ html {
     display: none;
 }
 
-nav {
-    background-color: var(--primary-color);
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+
+@media  (min-width: 701px) {
+    #navbar {
+        opacity: 100%;
+        background-color: var(--primary-color);
+        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        transition: all 0.3s ease; 
+    }
+    
+    #navbar.hidden {
+        opacity: 0%;
+    }
+       
 }
 
 nav ul {
@@ -111,8 +129,18 @@ nav ul #home-btn{
 @media screen and (max-width: 700px) {
 
     #navbar-mobile {
+        position: sticky;
+        top: 0;
+        opacity: 100%;
         display: block;
+        background-color: var(--primary-color);
+        z-index: 1;
         box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease; 
+    }
+
+    #navbar-mobile.hidden {
+        opacity: 0%;
     }
 
     #navbar-mobile > ul {
@@ -146,6 +174,7 @@ nav ul #home-btn{
         height: 100dvh;
         width: min(15em, 100%);
         z-index: 9;
+        background-color: var(--primary-color);
         transition: right 0.3s ease-out;
     }
 
@@ -162,6 +191,7 @@ nav ul #home-btn{
         flex-direction: column;
         width: 100%;
         align-items: unset;
+        gap: 0.2em;
     }
 
     nav ul #home-btn{
@@ -170,9 +200,18 @@ nav ul #home-btn{
 
     .menu-item {
         border: 0;
-        font-size: 1.5em;
         border-radius: 0;
         width: 100%;
+        padding: 0.6rem 0.6rem;
+    }
+
+    .menu-item a {
+        text-decoration: none;
+        color: var(--text-base-color);
+        width: 100%;
+        height: 100%;
+        font-size: 1.5em;
+        padding: 0;
     }
 
     .menu-item:hover {
@@ -354,12 +393,17 @@ nav ul #home-btn{
 
 #cookies {
     width: 100%;
+    padding-top: 1.1em;
     position: fixed;
     bottom:0;
     color: var(--text-secondary-color);
     background-color: rgba(0, 0, 0, 0.735);
     z-index: 10;
     display: none;
+}
+
+#cookies p {
+    margin-bottom: 1.1em;
 }
 
 .cookies {
@@ -435,14 +479,29 @@ nav ul #home-btn{
     padding: 2%;
     text-align: center;
     font-size: 0.9em;
+    text-wrap: wrap;
     
 }
 
 #contact-title {
     font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+#contacts-description {
+    margin-bottom: 1.1em;
+}
+
+.contacts-ref {
+    margin-bottom: 0.7em;
+}
+
+#contacts-main-location {
+    margin-top: 1.1em;
 }
 
 #footer-copyright {
+    padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 2%;
     padding-right: 2%;
@@ -459,11 +518,12 @@ nav ul #home-btn{
     flex-wrap: wrap;
     padding: 1em;
     margin-bottom: 0;
+    margin-top: 2em;
     text-align: center;
 }
 
 #map-complex {
-    margin-top: 2%;
+    margin-top: 3em;
     display: flex;
     justify-content: space-around;
 }
